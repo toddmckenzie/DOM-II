@@ -3,7 +3,15 @@
   .intro {
     padding: 90px 0 10px;
     border-bottom: 2px dashed @navigation-border;
-
+    .drop {
+      display: flex;
+      justify-content: space-between;
+    }
+    .dropZone {
+      font-size: 24px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
     img {
       max-width: 100%;
       height: auto;
@@ -20,8 +28,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -105,9 +113,9 @@
         width: 80%;
         margin: 0 auto 30px;
       }
-      
+
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
       }
     }
   }

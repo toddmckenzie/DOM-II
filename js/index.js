@@ -12,14 +12,6 @@
 	* [ ] `dblclick`'
  */
 
-let color0 = 'blue';
-let color1 = 'green';
-let color2 = 'red';
-let color3 = 'yellow';
-let color4 = 'green';
-let color5 = 'teal';
-let color6 = 'brown';
-let color7 = 'black';
 
 const logo = document.querySelector('.logo-heading');
 //mouseover events...
@@ -39,8 +31,36 @@ logo.addEventListener('mouseleave', event => {
 const navigation = document.querySelector('a');
 
 navigation.addEventListener('keydown', event => {
-  event.target.textContent = `keydown`
+  event.target.textContent = `Home`
+
 });
 
+navigation.addEventListener('keypress', event => {
+  event.target.textContent = 'Home';
 
-const introh2 = document.
+})
+//propagation
+
+//wheel inside Welcome to Fun Bus!.
+const introh2 = document.querySelector('.intro h2')
+introh2.addEventListener('wheel', event => {
+  event.target.style.fontSize = "10px";
+})
+
+
+//drag / drop //drag contact into drop zone..
+/*
+const draggable = document.querySelector('#drag');
+
+draggable.addEventListener('drag', event => {
+
+},false);
+*/
+
+//load
+
+//const alerter = document.querySelector('container')
+
+//alerter.addEventListener('DOMContentLoaded', event => {
+//  console.log(event.target.value);
+//})

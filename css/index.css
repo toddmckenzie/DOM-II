@@ -230,6 +230,15 @@ img {
   padding: 90px 0 10px;
   border-bottom: 2px dashed #C0C0C0;
 }
+.home .intro .drop {
+  display: flex;
+  justify-content: space-between;
+}
+.home .intro .dropZone {
+  font-size: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .home .intro img {
   max-width: 100%;
   height: auto;

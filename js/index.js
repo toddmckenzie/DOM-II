@@ -1,15 +1,15 @@
 // Your code goes here
 /*
-	* [ ] `mouseover`
-	* [ ] `keydown`
-	* [ ] `wheel`
+	* [ ] `mouseover` //
+	* [ ] `keydown` //
+	* [ ] `wheel` //
 	* [ ] `drag / drop`
-	* [ ] `load`
-	* [ ] `focus`
+	* [ ] `load` //
+	* [ ] `focus` //
 	* [ ] `resize`
 	* [ ] `scroll`
 	* [ ] `select`
-	* [ ] `dblclick`'
+	* [ ] `dblclick`'//
  */
 
 
@@ -19,6 +19,8 @@ logo.addEventListener('mouseover', event => {
     event.target.style.color = 'red';
     event.target.style.fontSize = '50px';
     event.target.style.textDecoration = 'underline';
+    alert('Im here')
+    event.stopPropagation();
  })
 
 logo.addEventListener('mouseleave', event => {
@@ -27,6 +29,12 @@ logo.addEventListener('mouseleave', event => {
   event.target.style.textDecoration = 'none';
 ;})
 
+
+
+const container1 = document.querySelector('.h1container');
+container1.addEventListener('mouseover', event => {
+  alert('Im bubbling over'); //this is prevented from running due to the event.stopPropgation from logo eventlistener
+});
 //keydown
 const navigation = document.querySelector('a');
 
@@ -37,8 +45,12 @@ navigation.addEventListener('keydown', event => {
 
 navigation.addEventListener('keypress', event => {
   event.target.textContent = 'Home';
+  //preventDefault();
 
 })
+const navigation1 = document.querySelector('.nav');
+
+
 //propagation
 
 //wheel inside Welcome to Fun Bus!.
@@ -59,8 +71,33 @@ draggable.addEventListener('drag', event => {
 
 //load
 
-//const alerter = document.querySelector('container')
+const alerter = document.querySelector('.intro img')
 
-//alerter.addEventListener('DOMContentLoaded', event => {
-//  console.log(event.target.value);
-//})
+alerter.addEventListener('load', event => {
+  alert('its loaded');
+})
+
+
+//focus on an input box.
+const welcome = document.querySelector('input');
+welcome.addEventListener('focus', event => {
+  event.target.style.background = "lightgreen";
+});
+
+
+//resize
+
+
+// select
+const fun1 = document.querySelector('.fun');
+fun1.addEventListener('select', event => {
+  console.log(event)
+  event.target.style.fontSize= "24px"
+})
+
+//dblclick
+
+const double = document.querySelector('.btn1');
+double.addEventListener('dblclick', event => {
+  event.target.style.backgroundColor = 'green';
+}); //double click on button1 changes color to green

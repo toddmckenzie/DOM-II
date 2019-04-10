@@ -20,7 +20,7 @@ logo.addEventListener('mouseover', event => {
     event.target.style.fontSize = '50px';
     event.target.style.textDecoration = 'underline';
     alert('Im here')
-    event.stopPropagation();
+    event.stopPropagation(); //stops the container1event listener...
  })
 
 logo.addEventListener('mouseleave', event => {
@@ -45,7 +45,7 @@ navigation.addEventListener('keydown', event => {
 
 navigation.addEventListener('keypress', event => {
   event.target.textContent = 'Home';
-  //preventDefault();
+  preventDefault();
 
 })
 const navigation1 = document.querySelector('.nav');
@@ -59,7 +59,11 @@ introh2.addEventListener('wheel', event => {
   event.target.style.fontSize = "10px";
 })
 
-
+const button2 = document.querySelector('.btn2');
+button2.addEventListener('click', event => {
+  event.target.style.color = "green";
+  event.preventDefault();
+});
 //drag / drop //drag contact into drop zone..
 /*
 const draggable = document.querySelector('#drag');
@@ -82,6 +86,8 @@ alerter.addEventListener('load', event => {
 const welcome = document.querySelector('input');
 welcome.addEventListener('focus', event => {
   event.target.style.background = "lightgreen";
+  event.target.style.height = "30px";
+  event.target.style.marginTop = "20px";
 });
 
 
@@ -100,4 +106,28 @@ fun1.addEventListener('select', event => {
 const double = document.querySelector('.btn1');
 double.addEventListener('dblclick', event => {
   event.target.style.backgroundColor = 'green';
+
 }); //double click on button1 changes color to green
+
+//scroll
+
+const double2 = document.querySelector('.btn2');
+double2.addEventListener('dblclick', event => {
+  event.target.style.backgroundColor = 'yellow';
+});
+
+const double3 = document.querySelector('.btn3');
+double3.addEventListener('dblclick', event => {
+  event.target.style.backgroundColor = 'blue';
+});
+
+const footer = document.querySelector('.footer');
+footer.addEventListener('mouseover', event => {
+  event.target.style.color = "red";
+  event.target.style.backgroundColor = "blue";
+});
+
+const displayPic = document.querySelector('.pic');
+displayPic.addEventListener('mouseover', event => {
+  event.target.style.display = "none"
+})
